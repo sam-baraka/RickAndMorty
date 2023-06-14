@@ -8,7 +8,7 @@
 import Foundation
 
 
-class SingleCharacterViewModel {
+class SingleCharacterViewModel : ObservableObject {
     @Published var character: RickAndMortyCharacter?
     
     func fetchCharacter(id: String) {
