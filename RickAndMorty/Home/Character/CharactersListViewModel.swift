@@ -8,7 +8,6 @@
 import Foundation
 
 
-
 struct Results<T: Codable>: Codable {
     let results: [T]
 }
