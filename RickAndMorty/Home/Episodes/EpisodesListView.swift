@@ -11,14 +11,15 @@ struct EpisodesListView: View {
     @StateObject private var viewModel = EpisodesViewModel()
     
     var body: some View {
-        List(viewModel.episodes, id: \.id) { episode in
-            EpisodeListItemView(episode: episode)
-        }
-        .navigationTitle("Rick and Morty Characters")
-        .onAppear {
-            viewModel.fetchEpisodes()
-        }
-        }
+        NavigationView{
+            List(viewModel.episodes, id: \.id) { episode in
+                EpisodeListItemView(episode: episode)
+            }
+            .navigationTitle("Rick and Morty Characters")
+            .onAppear {
+                viewModel.fetchEpisodes()
+            }
+        }}
     }
 
 

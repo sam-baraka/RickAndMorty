@@ -13,7 +13,7 @@ struct EpisodeListItemView: View {
     let episode: Episode
     
     var body: some View {
-        VStack(alignment: .leading) {
+        NavigationLink(destination: SingleEpisodeView(episode: episode)){VStack(alignment: .leading) {
             Text(episode.name)
                 .font(.headline)
             
@@ -25,7 +25,7 @@ struct EpisodeListItemView: View {
             
             Spacer()
         }
-        .padding()
+        .padding()}
     }
 }
 

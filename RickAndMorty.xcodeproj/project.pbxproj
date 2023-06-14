@@ -26,6 +26,7 @@
 		A2BF89732A3A5DAB002E575D /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BF89722A3A5DAB002E575D /* Result.swift */; };
 		A2BF89752A3A5DEA002E575D /* EpisodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BF89742A3A5DEA002E575D /* EpisodeViewModel.swift */; };
 		A2BF89772A3A6030002E575D /* EpisodeListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BF89762A3A6030002E575D /* EpisodeListItemView.swift */; };
+		A2BF89792A3A6130002E575D /* SingleEpisodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BF89782A3A6130002E575D /* SingleEpisodeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		A2BF89722A3A5DAB002E575D /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		A2BF89742A3A5DEA002E575D /* EpisodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeViewModel.swift; sourceTree = "<group>"; };
 		A2BF89762A3A6030002E575D /* EpisodeListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeListItemView.swift; sourceTree = "<group>"; };
+		A2BF89782A3A6130002E575D /* SingleEpisodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleEpisodeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +166,7 @@
 				A2BF896E2A3A5ABE002E575D /* EpisodesListView.swift */,
 				A2BF89742A3A5DEA002E575D /* EpisodeViewModel.swift */,
 				A2BF89762A3A6030002E575D /* EpisodeListItemView.swift */,
+				A2BF89782A3A6130002E575D /* SingleEpisodeView.swift */,
 			);
 			path = Episodes;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2BF89792A3A6130002E575D /* SingleEpisodeView.swift in Sources */,
 				A28718E12A3A161A0076266C /* RickAndMorty.xcdatamodeld in Sources */,
 				A2BF89772A3A6030002E575D /* EpisodeListItemView.swift in Sources */,
 				A28718F42A3A1DBF0076266C /* URLImage.swift in Sources */,
