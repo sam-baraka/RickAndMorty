@@ -13,16 +13,17 @@ struct CharactersListView: View {
     var body: some View {
         NavigationView {
             List(viewModel.characters, id: \.id) { character in
-                VStack(alignment: .leading) {
+                HStack{
                     URLImage(url: character.image)
                         .frame(width: 80, height: 80)
                         .cornerRadius(8)
-                    
-                    Text(character.name)
-                        .font(.headline)
-                    
-                    Text(character.species)
-                        .font(.subheadline)
+                    VStack(alignment: .leading) {
+                        Text(character.name)
+                            .font(.headline)
+                        
+                        Text(character.species)
+                            .font(.subheadline)
+                    }
                 }
             }
             .navigationTitle("Rick and Morty Characters")
