@@ -8,10 +8,19 @@
 import SwiftUI
 
 struct EpisodesListView: View {
+    @StateObject private var viewModel = EpisodesViewModel()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List(viewModel.episodes, id: \.id) { episode in
+            EpisodeListItemView(episode: episode)
+        }
+        .navigationTitle("Rick and Morty Characters")
+        .onAppear {
+            viewModel.fetchEpisodes()
+        }
+        }
     }
-}
+
 
 struct EpisodesListView_Previews: PreviewProvider {
     static var previews: some View {

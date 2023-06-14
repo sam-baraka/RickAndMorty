@@ -1,5 +1,5 @@
 //
-//  CharactersListViewModel.swift
+//  EpisodeViewModel.swift
 //  RickAndMorty
 //
 //  Created by Samuel Baraka on 14/06/2023.
@@ -8,11 +8,11 @@
 import Foundation
 
 
-class CharacterViewModel: ObservableObject {
-    @Published var characters: [RickAndMortyCharacter] = []
+class EpisodesViewModel: ObservableObject {
+    @Published var episodes: [Episode] = []
     
-    func fetchCharacters() {
-        guard let url = URL(string: "https://rickandmortyapi.com/api/character") else {
+    func fetchEpisodes() {
+        guard let url = URL(string: "https://rickandmortyapi.com/api/episode") else {
             return
         }
         
@@ -23,9 +23,9 @@ class CharacterViewModel: ObservableObject {
             
             do {
                 let decoder = JSONDecoder()
-                let result = try decoder.decode(Results<RickAndMortyCharacter>.self, from: data)
+                let result = try decoder.decode(Results<Episode>.self, from: data)
                 DispatchQueue.main.async {
-                    self.characters = result.results
+                    self.episodes = result.results
                 }
             } catch {
                 print("Error decoding JSON: \(error)")

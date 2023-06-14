@@ -22,6 +22,10 @@
 		A2BF896A2A3A55A8002E575D /* SingleCharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BF89692A3A55A8002E575D /* SingleCharacterView.swift */; };
 		A2BF896C2A3A56B3002E575D /* CharacterListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BF896B2A3A56B3002E575D /* CharacterListItem.swift */; };
 		A2BF896F2A3A5ABE002E575D /* EpisodesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BF896E2A3A5ABE002E575D /* EpisodesListView.swift */; };
+		A2BF89712A3A5CD5002E575D /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BF89702A3A5CD5002E575D /* Episode.swift */; };
+		A2BF89732A3A5DAB002E575D /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BF89722A3A5DAB002E575D /* Result.swift */; };
+		A2BF89752A3A5DEA002E575D /* EpisodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BF89742A3A5DEA002E575D /* EpisodeViewModel.swift */; };
+		A2BF89772A3A6030002E575D /* EpisodeListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BF89762A3A6030002E575D /* EpisodeListItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +45,10 @@
 		A2BF89692A3A55A8002E575D /* SingleCharacterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleCharacterView.swift; sourceTree = "<group>"; };
 		A2BF896B2A3A56B3002E575D /* CharacterListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListItem.swift; sourceTree = "<group>"; };
 		A2BF896E2A3A5ABE002E575D /* EpisodesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesListView.swift; sourceTree = "<group>"; };
+		A2BF89702A3A5CD5002E575D /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
+		A2BF89722A3A5DAB002E575D /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		A2BF89742A3A5DEA002E575D /* EpisodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeViewModel.swift; sourceTree = "<group>"; };
+		A2BF89762A3A6030002E575D /* EpisodeListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeListItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +116,8 @@
 			isa = PBXGroup;
 			children = (
 				A28718EB2A3A172E0076266C /* Character.swift */,
+				A2BF89702A3A5CD5002E575D /* Episode.swift */,
+				A2BF89722A3A5DAB002E575D /* Result.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -152,6 +162,8 @@
 			isa = PBXGroup;
 			children = (
 				A2BF896E2A3A5ABE002E575D /* EpisodesListView.swift */,
+				A2BF89742A3A5DEA002E575D /* EpisodeViewModel.swift */,
+				A2BF89762A3A6030002E575D /* EpisodeListItemView.swift */,
 			);
 			path = Episodes;
 			sourceTree = "<group>";
@@ -227,14 +239,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				A28718E12A3A161A0076266C /* RickAndMorty.xcdatamodeld in Sources */,
+				A2BF89772A3A6030002E575D /* EpisodeListItemView.swift in Sources */,
 				A28718F42A3A1DBF0076266C /* URLImage.swift in Sources */,
 				A2BF896C2A3A56B3002E575D /* CharacterListItem.swift in Sources */,
 				A28718DE2A3A161A0076266C /* Persistence.swift in Sources */,
 				A28718F12A3A1D8F0076266C /* CharactersListView.swift in Sources */,
 				A2BF896F2A3A5ABE002E575D /* EpisodesListView.swift in Sources */,
+				A2BF89752A3A5DEA002E575D /* EpisodeViewModel.swift in Sources */,
+				A2BF89732A3A5DAB002E575D /* Result.swift in Sources */,
 				A28718EF2A3A1AD60076266C /* CharactersListViewModel.swift in Sources */,
 				A2BF896A2A3A55A8002E575D /* SingleCharacterView.swift in Sources */,
 				A28718D72A3A16190076266C /* ContentView.swift in Sources */,
+				A2BF89712A3A5CD5002E575D /* Episode.swift in Sources */,
 				A28718EC2A3A172E0076266C /* Character.swift in Sources */,
 				A28718E92A3A16550076266C /* HomeView.swift in Sources */,
 				A28718F82A3A23A40076266C /* SingleCharacterViewModel.swift in Sources */,
