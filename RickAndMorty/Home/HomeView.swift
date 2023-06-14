@@ -14,6 +14,10 @@ struct HomeView: View {
                             .tabItem {
                                 Label("Characters", systemImage: "person.3")
                             }
+            EpisodesListView()
+                            .tabItem {
+                                Label("Episodes", systemImage: "film")
+                            }
         }
     }
 }
