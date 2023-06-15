@@ -12,8 +12,8 @@ import Combine
 struct URLImage: View {
     @StateObject private var imageLoader: ImageLoader
     
-    init(url: String) {
-        _imageLoader = StateObject(wrappedValue: ImageLoader(url: url))
+    init(url: String?) {
+        _imageLoader = StateObject(wrappedValue: ImageLoader(url: url ?? "https://rickandmortyapi.com/api/character/avatar/1.jpeg"))
     }
     
     var body: some View {

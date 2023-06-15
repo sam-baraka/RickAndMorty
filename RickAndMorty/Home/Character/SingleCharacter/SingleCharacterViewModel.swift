@@ -10,8 +10,10 @@ import Foundation
 
 class SingleCharacterViewModel : ObservableObject {
     @Published var character: RickAndMortyCharacter?
+    @Published var isLoading = false
     
     func fetchCharacter(id: String) {
+        isLoading=true
         guard let url = URL(string: "https://rickandmortyapi.com/api/character/\(id)") else {
             return
         }
@@ -32,6 +34,7 @@ class SingleCharacterViewModel : ObservableObject {
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
                 let result = try decoder.decode(RickAndMortyCharacter.self, from: data)
                 DispatchQueue.main.async {
+                    self.isLoading = false
                     self.character = result
                 }
             } catch {

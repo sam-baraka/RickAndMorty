@@ -27,3 +27,5 @@ struct CharacterLocation: Codable, Hashable {
     let name: String
     let url: String
 }
+
+
