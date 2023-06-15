@@ -15,7 +15,7 @@ struct CharacterListItem: View {
     }
     
     var body: some View {
-        NavigationLink(destination: SingleCharacterView().navigationBarTitle(character.name, displayMode: .inline)
+        NavigationLink(destination: SingleCharacterView(id: String(character.id)).navigationBarTitle(character.name, displayMode: .inline)
         
         ){HStack{
             URLImage(url: character.image)

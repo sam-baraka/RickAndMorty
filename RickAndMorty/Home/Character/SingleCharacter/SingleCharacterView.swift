@@ -9,13 +9,25 @@ import SwiftUI
 
 struct SingleCharacterView: View {
     @StateObject private var viewModel = SingleCharacterViewModel()
+    private let id: String
+    init(id: String) {
+     
+        self.id = id
+    }
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            Text(id)
+        }.onAppear{
+            viewModel.fetchCharacter(id: id)
+        }
     }
 }
 
 struct SingleCharacterView_Previews: PreviewProvider {
     static var previews: some View {
-        SingleCharacterView()
+        SingleCharacterView(
+        id: "1"
+        )
     }
 }

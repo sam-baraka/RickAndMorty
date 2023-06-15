@@ -12,7 +12,7 @@ struct SingleEpisodeView: View {
     let episode: Episode
     
     var body: some View {
-        ScrollView{VStack(alignment: .leading, spacing: 16) {
+        VStack(alignment: .leading, spacing: 16) {
             Text(episode.name)
                 .font(.title)
             
@@ -28,16 +28,17 @@ struct SingleEpisodeView: View {
                 .font(.headline)
             
             ForEach(episode.characters, id: \.self) { characterURL in
-                NavigationLink(destination: SingleCharacterView() ) {
-                    Text(characterURL)
-                }
+                if let lastPathComponent = URL(string: characterURL)?.lastPathComponent{
+                    NavigationLink(destination: SingleCharacterView(id: lastPathComponent) ) {
+                        Text(characterURL)
+                    }}
             }
             
             Spacer()
         }
         .padding()
         .navigationBarTitle("Episode Details", displayMode: .inline)
-        }}
+    }
 }
 
 
