@@ -10,8 +10,10 @@ import Foundation
 
 class CharacterViewModel: ObservableObject {
     @Published var characters: [RickAndMortyCharacter] = []
+    @Published var isLoading:Bool = false
     
     func fetchCharacters() {
+        isLoading = true
         guard let url = URL(string: "https://rickandmortyapi.com/api/character") else {
             return
         }
@@ -26,6 +28,7 @@ class CharacterViewModel: ObservableObject {
                 let result = try decoder.decode(Results<RickAndMortyCharacter>.self, from: data)
                 DispatchQueue.main.async {
                     self.characters = result.results
+                    self.isLoading = false
                 }
             } catch {
                 print("Error decoding JSON: \(error)")

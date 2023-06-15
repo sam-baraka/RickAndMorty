@@ -12,15 +12,19 @@ struct CharactersListView: View {
     
     var body: some View {
         NavigationView {
-            List(viewModel.characters, id: \.id) { character in
-              CharacterListItem(
-              character: character)
-            }
-            .navigationTitle("Rick and Morty Characters")
-            .onAppear {
-                viewModel.fetchCharacters()
-            }
-        }
+           
+            VStack{
+                if viewModel.isLoading{
+                    ProgressView()
+                }else{List(viewModel.characters, id: \.id) { character in
+                    CharacterListItem(
+                        character: character)
+                }
+                .navigationTitle("Rick and Morty Characters")
+                    
+                }} .onAppear {
+            viewModel.fetchCharacters()
+        }}
     }
 }
 
