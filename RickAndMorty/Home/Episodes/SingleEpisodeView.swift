@@ -12,7 +12,7 @@ struct SingleEpisodeView: View {
     let episode: Episode
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 16) {
+        ScrollView{VStack(alignment: .leading, spacing: 16) {
             Text(episode.name)
                 .font(.title)
             
@@ -37,7 +37,7 @@ struct SingleEpisodeView: View {
             Spacer()
         }
         .padding()
-        .navigationBarTitle("Episode Details", displayMode: .inline)
+        .navigationBarTitle("Episode Details", displayMode: .inline)}
     }
 }
 
